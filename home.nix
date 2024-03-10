@@ -21,12 +21,12 @@
   # environment.
   home.packages = with pkgs; [
     # Terminal commands
-    vim
+    # vim
     neovim
-    gcc
+    # gcc
     gnumake
     ripgrep
-    wget
+    # wget
     git
     docker-compose
 
@@ -47,10 +47,6 @@
     corepack_20
     python3
 
-    # system utilities
-    ntfs3g
-    openrazer-daemon
-
     # fonts
     nerdfonts
   ];
@@ -70,6 +66,10 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    
+    ".vimrc".source = dotfiles/vimrc;
+
+    ".config/noisetorch/config.toml".source = dotfiles/noisetorch/config.toml;
   };
 
   # Home Manager can also manage your environment variables through

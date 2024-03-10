@@ -1,0 +1,7 @@
+Threshold = 83
+DisplayMonitorSources = false
+EnableUpdates = true
+FilterInput = true
+FilterOutput = false
+LastUsedInput = "alsa_input.usb-Kingston_HyperX_Cloud_Alpha_S_000000000001-00.mono-fallback"
+LastUsedOutput = ""
