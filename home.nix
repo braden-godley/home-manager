@@ -6,6 +6,12 @@
   home.username = "bgodley";
   home.homeDirectory = "/home/bgodley";
 
+  programs.git = { 
+    enable = true;
+    userName = "Braden Godley";
+    userEmail = "braden@bgodley.com";
+  };
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -21,12 +27,12 @@
   # environment.
   home.packages = with pkgs; [
     # Terminal commands
-    # vim
+    vim
     neovim
-    # gcc
+    gcc
     gnumake
     ripgrep
-    # wget
+    wget
     git
     docker-compose
 
