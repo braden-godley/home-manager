@@ -68,8 +68,8 @@
     # '';
     
     ".vimrc".source = dotfiles/vimrc;
-
     ".config/noisetorch/config.toml".source = dotfiles/noisetorch/config.toml;
+    ".config/openrazer/persistence.conf".source = dotfiles/openrazer/persistence.conf;
   };
 
   # Home Manager can also manage your environment variables through
