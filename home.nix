@@ -36,6 +36,10 @@
     git
     docker-compose
 
+    # kubernetes
+    minikube
+    kubectl
+
     # Applications
     vscode
     obsidian
