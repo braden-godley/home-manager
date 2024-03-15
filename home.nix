@@ -28,6 +28,7 @@
   home.packages = with pkgs; [
     # Terminal commands
     vim
+    htop
     neovim
     gcc
     gnumake
