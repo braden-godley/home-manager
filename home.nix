@@ -36,6 +36,8 @@
     wget
     git
     docker-compose
+    zip
+    ansible
 
     # kubernetes
     minikube
