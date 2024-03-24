@@ -38,6 +38,7 @@
     docker-compose
     zip
     ansible
+    ngrok
 
     # kubernetes
     minikube
@@ -58,7 +59,6 @@
     # Languages
     nodejs_20
     corepack_20
-    python3
 
     # fonts
     nerdfonts
