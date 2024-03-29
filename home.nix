@@ -49,12 +49,14 @@
     obsidian
     noisetorch
     firefox
+    tor-browser
     libreoffice
     spotify
     discord
     signal-desktop
     protonvpn-gui
     polychromatic
+    gimp
 
     # Languages
     nodejs_20
@@ -62,6 +64,9 @@
 
     # fonts
     nerdfonts
+
+    # steering wheel
+    oversteer
   ];
 
   fonts.fontconfig.enable = true;
