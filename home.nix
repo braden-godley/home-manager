@@ -39,12 +39,14 @@
     zip
     ansible
     ngrok
+    flatpak
 
     # kubernetes
     minikube
     kubectl
 
     # Applications
+    gnome.gnome-software
     vscode
     obsidian
     noisetorch
@@ -54,9 +56,9 @@
     spotify
     discord
     signal-desktop
-    protonvpn-gui
     polychromatic
     gimp
+    jetbrains.datagrip
 
     # Languages
     nodejs_20
