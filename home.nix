@@ -49,7 +49,6 @@
     gnome.gnome-software
     vscode
     obsidian
-    noisetorch
     firefox
     tor-browser
     libreoffice
@@ -63,15 +62,59 @@
     # Languages
     nodejs_20
     corepack_20
+    rustc
+    cargo
 
     # fonts
     nerdfonts
 
     # steering wheel
     oversteer
+
+    # voice cancellation
+    noisetorch
   ];
 
   fonts.fontconfig.enable = true;
+
+
+  # Define the systemd service for noisetorch
+  # systemd.user.services.noisetorch = {
+  #   description = "NoiseTorch for Kingston HyperX Cloud Alpha S Headset";
+  #   after = [ "pipewire.service" ]; 
+  #   wantedBy = [ "default.target" ];
+  #   path = with pkgs; [ noisetorch ];
+  #   serviceConfig = {
+  #     ExecStart = ''
+  #       ${pkgs.noisetorch}/bin/noisetorch -i -s alsa_input.usb-Kingston_HyperX_Cloud_Alpha_S_000000000001-00.mono-fallback
+  #     '';
+  #     Restart = "on-failure";
+  #   };
+  # };
+
+  systemd.user.services = {
+    noisetorch = {
+      Unit = {
+        Description = "NoiseTorch";
+        After = "pipewire.service";
+        Documentation = "man:noisetorch(1)";
+      };
+      Service = {
+        # DynamicUser = true;
+        Environment = "DEVICE=alsa_input.usb-Kingston_HyperX_Cloud_Alpha_S_000000000001-00.mono-fallback";
+        ExecStart = "${pkgs.noisetorch}/bin/noisetorch -i -s $DEVICE";
+        Restart = "on-failure";
+        RestartSec = 5;
+        StartLimitBurst = 3;
+      };
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
+    };
+  };
+
+  # Enable the NoiseTorch systemd service
+  systemd.user.startServices = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
