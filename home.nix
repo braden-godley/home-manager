@@ -1,5 +1,13 @@
 { config, pkgs, ... }:
 
+let 
+  chatgpt-cli = pkgs.callPackage (pkgs.fetchFromGitHub {
+    owner = "braden-godley";
+    repo = "chatgpt-cli";
+    rev = "master";
+    sha256 = "sha256-WgGDU03pJG2XW6+N7//c/b38DzTE76hnXM/AxlRkFq8=";
+  }) {};
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -40,6 +48,7 @@
     ansible
     ngrok
     flatpak
+    chatgpt-cli
 
     # kubernetes
     minikube
@@ -62,8 +71,7 @@
     # Languages
     nodejs_20
     corepack_20
-    rustc
-    cargo
+    rustup
 
     # fonts
     nerdfonts
