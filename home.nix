@@ -43,6 +43,7 @@ in
     ripgrep
     wget
     git
+    git-lfs
     docker-compose
     zip
     ansible
