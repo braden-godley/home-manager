@@ -73,6 +73,7 @@ in
     nodejs_20
     corepack_20
     rustup
+    python3
 
     # fonts
     nerdfonts
