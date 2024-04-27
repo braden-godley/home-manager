@@ -50,6 +50,7 @@ in
     ngrok
     flatpak
     chatgpt-cli
+    openvpn
 
     # kubernetes
     minikube
