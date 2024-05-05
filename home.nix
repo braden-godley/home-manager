@@ -85,6 +85,9 @@ in
 
     # voice cancellation
     noisetorch
+
+    # clipboard
+    xclip
   ];
 
   fonts.fontconfig.enable = true;
