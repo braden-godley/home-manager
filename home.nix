@@ -101,11 +101,10 @@ in
             "sudo" 
             "tmux" 
             "colored-man-pages" 
-            "command-not-found" 
             "docker" 
             "docker-compose" 
         ];
-        theme = "fishy";
+        theme = "miloshadzic";
     };
   };
 
@@ -167,6 +166,7 @@ in
     ".vimrc".source = dotfiles/vimrc;
     ".config/noisetorch/config.toml".source = dotfiles/noisetorch/config.toml;
     ".config/openrazer/persistence.conf".source = dotfiles/openrazer/persistence.conf;
+    ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
     ".tmux.conf".source = dotfiles/tmux.conf;
   };
 
