@@ -92,7 +92,24 @@ in
   ];
 
   programs.zsh = {
+    initExtra = ''
+        # pnpm
+        export PNPM_HOME="/home/bgodley/.local/share/pnpm"
+        case ":$PATH:" in
+          *":$PNPM_HOME:"*) ;;
+          *) export PATH="$PNPM_HOME:$PATH" ;;
+        esac
+        # pnpm end
+
+        export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/bgodley/.local/share/flatpak/exports/share:$\{XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+
+        export PATH="$PATH:/home/bgodley/.cargo/bin"
+    '';
     enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+    history.size = 10000;
     oh-my-zsh = {
         enable = true;
         plugins = [ 
