@@ -52,6 +52,7 @@ in
     chatgpt-cli
     openvpn
     tmux
+    alacritty
 
     # kubernetes
     minikube
@@ -89,6 +90,24 @@ in
     # clipboard
     xclip
   ];
+
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh = {
+        enable = true;
+        plugins = [ 
+            "git" 
+            "rust" 
+            "sudo" 
+            "tmux" 
+            "colored-man-pages" 
+            "command-not-found" 
+            "docker" 
+            "docker-compose" 
+        ];
+        theme = "fishy";
+    };
+  };
 
   fonts.fontconfig.enable = true;
 
