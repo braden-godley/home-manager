@@ -101,10 +101,11 @@ in
         esac
         # pnpm end
 
-        export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/bgodley/.local/share/flatpak/exports/share:$\{XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+        # Correcting the XDG_DATA_DIRS
+        # export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/bgodley/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
 
         export PATH="$PATH:/home/bgodley/.cargo/bin"
-    '';
+    '';  
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
@@ -121,7 +122,10 @@ in
             "docker" 
             "docker-compose" 
         ];
-        theme = "miloshadzic";
+    };
+    shellAliases = {
+        hm = "cd ~/.config/home-manager";
+        hms = "git add . && git commit -m $(date +%D%T) && git push && home-manager switch";
     };
   };
 
