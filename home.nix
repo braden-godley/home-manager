@@ -125,7 +125,7 @@ in
     };
     shellAliases = {
         hm = "cd ~/.config/home-manager";
-        hms = "git add . && git commit -m $(date +%D%T) && git push && home-manager switch";
+        hms = "git add . && git commit -m $(date +%DT%T) && git push && home-manager switch";
     };
   };
 
