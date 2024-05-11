@@ -77,6 +77,8 @@ in
     corepack_20
     rustup
     python3
+    php83Packages.composer
+    php83
 
     # fonts
     nerdfonts
