@@ -125,8 +125,8 @@ in
     };
     shellAliases = {
         hm = "cd ~/.config/home-manager";
-        hms = "git add . && git commit -m $(date +%DT%T) && git push && home-manager switch";
-        clean-repo = "git branch -v | grep '\[gone\]' | awk '{ print $1 }' | xargs git branch -D"
+        hms = "home-manager switch && git add . && git commit -m $(date +%DT%T) && git push";
+        clean-repo = "git branch -v | grep '[gone]' | awk '{ print $1 }' | xargs git branch -D"
     };
   };
 
