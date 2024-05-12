@@ -80,6 +80,10 @@ in
     php83Packages.composer
     php83
 
+    # lsp
+    nodePackages.intelephense
+    tailwindcss-language-server
+
     # fonts
     nerdfonts
 
