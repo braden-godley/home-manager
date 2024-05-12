@@ -53,6 +53,7 @@ in
     openvpn
     tmux
     alacritty
+    sqlite
 
     # kubernetes
     minikube
