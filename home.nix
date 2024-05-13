@@ -113,6 +113,7 @@ in
         # export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/bgodley/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
 
         export PATH="$PATH:/home/bgodley/.cargo/bin"
+		export PATH="$PATH:/home/bgodley/.local/bin"
     '';  
     enable = true;
     enableCompletion = true;
