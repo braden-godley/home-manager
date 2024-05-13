@@ -83,6 +83,7 @@ in
 
     # lsp
     nodePackages.intelephense
+	lua-language-server
     tailwindcss-language-server
 
     # fonts
