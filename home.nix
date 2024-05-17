@@ -55,6 +55,9 @@ in
     alacritty
     sqlite
 
+	# tiling window manager 
+	libsForQt5.bismuth
+
     # kubernetes
     minikube
     kubectl
