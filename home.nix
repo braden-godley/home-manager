@@ -55,9 +55,6 @@ in
     alacritty
     sqlite
 
-	# tiling window manager 
-	libsForQt5.bismuth
-
     # kubernetes
     minikube
     kubectl
@@ -117,6 +114,7 @@ in
 
         export PATH="$PATH:/home/bgodley/.cargo/bin"
 		export PATH="$PATH:/home/bgodley/.local/bin"
+		export PATH="$HOME/.symfony5/bin:$PATH"
     '';  
     enable = true;
     enableCompletion = true;
