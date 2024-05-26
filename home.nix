@@ -7,6 +7,7 @@ let
     rev = "master";
     sha256 = "sha256-WgGDU03pJG2XW6+N7//c/b38DzTE76hnXM/AxlRkFq8=";
   }) {};
+  myPhp = pkgs.php83.withExtensions ({ all, enabled }: enabled ++ [ all.xsl ]);
 in
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -54,6 +55,8 @@ in
     tmux
     alacritty
     sqlite
+    postgresql
+    unzip
 
     # kubernetes
     minikube
@@ -61,6 +64,7 @@ in
 
     # Applications
     gnome.gnome-software
+    gnome.gnome-tweaks
     vscode
     obsidian
     firefox
@@ -79,7 +83,7 @@ in
     rustup
     python3
     php83Packages.composer
-    php83
+    myPhp
 
     # lsp
     nodePackages.intelephense
