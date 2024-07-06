@@ -76,6 +76,7 @@ in
     polychromatic
     gimp
     jetbrains.datagrip
+    woeusb # install windows iso to usb
 
     # Languages
     nodejs_20
