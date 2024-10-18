@@ -102,6 +102,8 @@ in
 
     # clipboard
     xclip
+
+    musescore
   ];
 
   programs.zsh = {
