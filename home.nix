@@ -103,7 +103,11 @@ in
     # clipboard
     xclip
 
-    musescore
+    (wineWowPackages.full.override {
+        wineRelease = "staging";
+        mingwSupport = true;
+    })
+    winetricks
   ];
 
   programs.zsh = {
