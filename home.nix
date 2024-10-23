@@ -68,6 +68,7 @@ in
     vscode
     obsidian
     firefox
+    ungoogled-chromium
     tor-browser
     libreoffice
     spotify
